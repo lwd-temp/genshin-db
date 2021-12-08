@@ -26,33 +26,33 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - name: Build All languages
-      run: npm run build --if-present && mv dist/genshindb.js dist/genshindb-All.js
+      run: npm run build --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-All.js
     - name: Build ChineseSimplified
-      run: npm run build ChineseSimplified --if-present && mv dist/genshindb.js dist/genshindb-ChineseSimplified.js
+      run: npm run build ChineseSimplified --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-ChineseSimplified.js
     - name: Build ChineseTraditional
-      run: npm run build ChineseTraditional --if-present && mv dist/genshindb.js dist/genshindb-ChineseTraditional.js
+      run: npm run build ChineseTraditional --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-ChineseTraditional.js
     - name: Build English
-      run: npm run build English --if-present && mv dist/genshindb.js dist/genshindb-English.js
+      run: npm run build English --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-English.js
     - name: Build French
-      run: npm run build French --if-present && mv dist/genshindb.js dist/genshindb-French.js
+      run: npm run build French --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-French.js
     - name: Build German
-      run: npm run build German --if-present && mv dist/genshindb.js dist/genshindb-German.js
+      run: npm run build German --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-German.js
     - name: Build Indonesian
-      run: npm run build Indonesian --if-present && mv dist/genshindb.js dist/genshindb-Indonesian.js
+      run: npm run build Indonesian --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Indonesian.js
     - name: Build Japanese
-      run: npm run build Japanese --if-present && mv dist/genshindb.js dist/genshindb-Japanese.js
+      run: npm run build Japanese --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Japanese.js
     - name: Build Korean
-      run: npm run build Korean --if-present && mv dist/genshindb.js dist/genshindb-Korean.js
+      run: npm run build Korean --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Korean.js
     - name: Build Portuguese
-      run: npm run build Portuguese --if-present && mv dist/genshindb.js dist/genshindb-Portuguese.js
+      run: npm run build Portuguese --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Portuguese.js
     - name: Build Russian
-      run: npm run build Russian --if-present && mv dist/genshindb.js dist/genshindb-Russian.js
+      run: npm run build Russian --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Russian.js
     - name: Build Spanish
-      run: npm run build Spanish --if-present && mv dist/genshindb.js dist/genshindb-Spanish.js
+      run: npm run build Spanish --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Spanish.js
     - name: Build Thai
-      run: npm run build Thai --if-present && mv dist/genshindb.js dist/genshindb-Thai.js
+      run: npm run build Thai --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Thai.js
     - name: Build Vietnamese
-      run: npm run build Vietnamese --if-present && mv dist/genshindb.js dist/genshindb-Vietnamese.js
+      run: npm run build Vietnamese --if-present --define:global=window && mv dist/genshindb.js dist/genshindb-Vietnamese.js
     - name: GitHub Releases
       uses: xresloader/upload-to-github-release@v1
       env:
